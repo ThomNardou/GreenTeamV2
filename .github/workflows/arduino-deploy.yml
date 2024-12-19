@@ -1,0 +1,24 @@
+name: Deploy arduino code
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  arduino-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute Git Commands on Remote Server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            cd /home/adminMalenia/GreenTeamV2
+            git fetch
+            git pull
