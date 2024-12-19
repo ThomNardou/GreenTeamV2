@@ -13,7 +13,7 @@ const client = mqtt.connect("mqtt://blue.section-inf.ch:1883", {
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send(`<a href="http://51.103.215.168/file">Download Arduino script</a> <br> <a href='/arroseur/on'>Turn on the light</a>  ||  <a href='/arroseur/off'>Turn off the light</a>.`);
+  res.send(`<a href="http://51.103.215.168/file" download>Download Arduino script</a> <br> <a href='/arroseur/on'>Turn on the light</a>  ||  <a href='/arroseur/off'>Turn off the light</a>.`);
 });
 
 app.get("/arroseur/on", (req, res) => {
