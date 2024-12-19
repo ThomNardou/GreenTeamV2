@@ -62,8 +62,4 @@ jobs:
         with:
           app-name: 'greenteamv2-staging'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84220BE901E14A2B93F05A52A6CC1328 }}
-
-      - name: get process
-        run: ps -a
