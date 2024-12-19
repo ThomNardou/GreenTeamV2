@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
             font-family: 'Arial';
             font-weight: bolder;
             text-decoration: none;
-            margin-bottom: 30px;
+            margin: 30px 0;
         "
   >Download Arduino script</a> <br> <a href='/arroseur/on'>Turn on the light</a>  ||  <a href='/arroseur/off'>Turn off the light</a>.`);
 });
