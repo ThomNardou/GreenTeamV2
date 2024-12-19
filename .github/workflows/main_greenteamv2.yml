@@ -59,3 +59,10 @@ jobs:
           app-name: 'greenteamv2'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64BFFBDC4AD54D30B4F7E9298A2F50E4 }}
+
+      - name: create github release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            .
+          tag_name: ${{ github.ref_name }}
