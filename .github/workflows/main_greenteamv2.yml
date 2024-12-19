@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - greenteamv2
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'Website_v*.*.*'
   workflow_dispatch:
 
 jobs:
