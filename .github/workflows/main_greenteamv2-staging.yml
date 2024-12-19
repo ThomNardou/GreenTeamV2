@@ -55,9 +55,8 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
-      - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
+
+      - name: deploy frontend to azure
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'greenteamv2-staging'
