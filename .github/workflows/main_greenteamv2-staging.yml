@@ -64,3 +64,6 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84220BE901E14A2B93F05A52A6CC1328 }}
+          debug: true
+          async: false
+        timeout-minutes: 5
