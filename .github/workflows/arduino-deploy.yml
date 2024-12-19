@@ -3,7 +3,7 @@ name: Deploy arduino code
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "Arduino_v*.*.*"
 
 jobs:
   arduino-deploy:
@@ -22,3 +22,10 @@ jobs:
             cd /home/adminMalenia/GreenTeamV2
             git fetch
             git pull
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            Arduino/arroseur/arroseur.ino
+          tag_name: ${{ github.ref_name }}
