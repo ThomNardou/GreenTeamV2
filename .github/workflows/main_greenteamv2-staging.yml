@@ -29,9 +29,9 @@ jobs:
           npm install
 
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'greenteamv2-staging'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84220BE901E14A2B93F05A52A6CC1328 }}
+          package: .
       
