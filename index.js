@@ -38,3 +38,9 @@ app.get("/arroseur/off", (req, res) => {
 app.listen(8080, () => {
   console.log(`Server is running on ${process.env.APP_HOST}`);
 })
+
+process.on('SIGTERM', () => {
+  app.close(() => {
+    console.log('Process terminated');
+  });
+})
