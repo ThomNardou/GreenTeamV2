@@ -39,8 +39,8 @@ app.listen(8080, () => {
   console.log(`Server is running on ${process.env.APP_HOST}`);
 })
 
-process.on('SIGTERM', () => {
-  app.close(() => {
-    console.log('Process terminated');
-  });
-})
+process.on('SIGINT', () => {
+  client.end();
+  process.exit();
+  app.close();
+}
