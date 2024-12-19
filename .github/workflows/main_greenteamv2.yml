@@ -61,7 +61,7 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64BFFBDC4AD54D30B4F7E9298A2F50E4 }}
 
       - name: Create release from tag
-        uses: create-release-action/create-release@v1
+        uses: actions/create-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           release_name: Release ${{ github.ref_name }}
