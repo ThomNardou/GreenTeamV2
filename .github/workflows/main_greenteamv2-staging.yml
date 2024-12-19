@@ -33,4 +33,6 @@ jobs:
           app-name: 'greenteamv2-staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84220BE901E14A2B93F05A52A6CC1328 }}
           package: .
+          app-settings: |
+            WEBSITE_RUN_FROM_PACKAGE=1
       
